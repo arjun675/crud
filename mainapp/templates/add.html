@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add details</title>
+    <style>
+        a{
+            background-color: green;
+            color: white;
+            font-size: 20px;
+            margin-left:40% ;
+        }
+        form{
+            margin-top: 30px;
+        }
+        label{
+            display:inline-block;
+            width: 20%;
+        }
+        input{
+            width: 60%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        button{
+            background-color: green;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">Home</a>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter Employee Name">
+        <label>Email</label>
+        <input type="text" name="email" placeholder="Enter email id">
+        <label>Phone</label>
+        <input type="number" name="phone" value=0>
+        <label>Salary</label>
+        <input type="number" name="salary" value=0>
+        <label>Designation</label>
+        <input type="text" name="dsg" placeholder="Enter designation">
+        <label>City</label>
+        <input type="text" name="city" placeholder="Enter City name">
+        <label>State</label>
+        <input type="text" name="state" placeholder="enter state name">
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>

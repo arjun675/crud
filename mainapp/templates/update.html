@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update | details</title>
+    <style>
+        a{
+            background-color: green;
+            color: white;
+            font-size: 20px;
+            margin-left:40% ;
+        }
+        form{
+            margin-top: 30px;
+        }
+        label{
+            display:inline-block;
+            width: 20%;
+        }
+        input{
+            width: 60%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        button{
+            background-color: green;
+            padding: 10px;
+            margin-top: 10px;
+            color: white;
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">Home</a>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label>Name</label>
+        <input type="text" name="name" value="{{Data.name}}">
+        <label>Email</label>
+        <input type="text" name="email" value="{{Data.email}}">
+        <label>Phone</label>
+        <input type="number" name="phone" value="{{Data.phone}}">
+        <label>Salary</label>
+        <input type="number" name="salary" value="{{Data.salary}}">
+        <label>Designation</label>
+        <input type="text" name="dsg" value="{{Data.dsg}}">
+        <label>City</label>
+        <input type="text" name="city" value="{{Data.city}}">
+        <label>State</label>
+        <input type="text" name="state" value="{{Data.state}}">
+        <button type="submit">update</button>
+    </form>
+</body>
+</html>

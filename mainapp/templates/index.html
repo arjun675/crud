@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud | Home</title>
+    <style>
+      a{
+        background-color: green;
+        color: white;
+        font-family: 'Times New Roman';
+        font-size: 30px;
+        padding-top: 5px;
+        margin-left: 40%;
+      }
+      table{
+        margin-top:10px;
+      }
+      th{
+        background-color: aqua;
+        color: black;
+      }
+    .Id{
+      background-color: blanchedalmond;
+      color: black;
+      }
+      td{
+        background-color: rgb(91, 211, 175) ;
+      }
+    </style>
+</head>
+<body>
+  <h1>Home Page</h1>
+  <a href="/add/">add record</a>
+  <table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>Salary</th>
+        <th>Designation</th>
+        <th>City</th>
+        <th>State</th>
+    </tr>
+    {% for i in Data %}
+    <tr>
+        <td class="Id">{{i.Id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.phone}}</td>
+        <td>{{i.salary}}</td>
+        <td>{{i.dsg}}</td>
+        <td>{{i.city}}</td>
+        <td>{{i.state}}</td>
+        <td><a href="/update/{{i.Id}}/">Edit</a></td>
+        <td><a href="/delete/{{i.Id}}/">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
